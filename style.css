@@ -23,7 +23,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .menu-panel .t{display:grid}
 .menu-panel .t span{grid-area:1/1;text-align:right}
 /* Hover: a light caramel colour spreads out across the word from where the mouse enters (--x, set in site.js). */
-.menu-panel .t .i{--x:50%;color:#dcbc92;clip-path:inset(0 calc(100% - var(--x)) 0 var(--x));transition:clip-path 1s cubic-bezier(.65,0,.25,1)}
+.menu-panel .t .i{--x:50%;color:#d99c5e;clip-path:inset(0 calc(100% - var(--x)) 0 var(--x));transition:clip-path 1s cubic-bezier(.65,0,.25,1)}
 .menu-panel a.lit .i,.menu-panel a:focus-visible .i,.menu-panel a[aria-current] .i{clip-path:inset(0 0 0 0)}
 .menu-panel a[aria-current]::before{content:"";width:24px;height:1px;background:currentColor;opacity:.7}
 .menu-panel :focus-visible{outline-color:var(--cream)}
