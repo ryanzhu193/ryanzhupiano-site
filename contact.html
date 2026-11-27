@@ -21,18 +21,17 @@
 <section id="contact"><div class="wrap two">
 <div>
 <h1>Contact</h1>
-<p>Concert inquiries, collaborations, masterclasses and press requests are all welcome. For a performance, include the date, venue and occasion, and I will reply with availability and program options.</p>
+<p>Concert inquiries, collaborations, masterclasses and press requests are all welcome. For a performance, please include the date, venue and occasion in your message, and I will reply with availability and program options.</p>
 </div>
 <form action="https://formspree.io/f/mljbvvgq" method="POST">
 <input type="hidden" name="_subject" value="New inquiry from ryanzhupiano.com">
+<p class="note">Fields marked * are required.</p>
 <div class="row">
-<label>First name<input name="first" required autocomplete="given-name"></label>
-<label>Last name<input name="last" required autocomplete="family-name"></label>
+<label><span>First name<span aria-hidden="true"> *</span></span><input name="first" required autocomplete="given-name"></label>
+<label><span>Last name<span aria-hidden="true"> *</span></span><input name="last" required autocomplete="family-name"></label>
 </div>
-<label>Email<input type="email" name="email" required autocomplete="email"></label>
-<label>Reason for contact<select name="event"><option>Recital</option><option>Concert with ensemble</option><option>Private event</option><option>Masterclass</option><option>Press or media</option><option>Other</option></select></label>
-<label>Date and venue (if a performance)<input name="details"></label>
-<label>Message<textarea name="message" required></textarea></label>
+<label><span>Email<span aria-hidden="true"> *</span></span><input type="email" name="email" required autocomplete="email"></label>
+<label><span>Message<span aria-hidden="true"> *</span></span><textarea name="message" required></textarea></label>
 <button class="btn" type="submit" style="justify-self:start">Send message</button>
 </form>
 </div></section>
