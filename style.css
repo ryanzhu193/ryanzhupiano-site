@@ -22,9 +22,9 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .menu-panel a{display:flex;align-items:center;gap:14px;margin-right:-.24em;padding:9px 0;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:1.15rem;letter-spacing:.24em;line-height:1;text-transform:uppercase;text-decoration:none;opacity:0;transform:translateY(-6px);transition:opacity .25s ease,transform .25s ease}
 .menu-panel .t{display:grid}
 .menu-panel .t span{grid-area:1/1;text-align:right}
-/* Hover: a light caramel colour wipes across the word from right to left. */
-.menu-panel .t .i{color:#dcbc92;clip-path:inset(0 0 0 100%);transition:clip-path .55s cubic-bezier(.65,0,.25,1)}
-.menu-panel a:hover .i,.menu-panel a:focus-visible .i,.menu-panel a[aria-current] .i{clip-path:inset(0 0 0 0)}
+/* Hover: a light caramel colour spreads out across the word from where the mouse enters (--x, set in site.js). */
+.menu-panel .t .i{--x:50%;color:#dcbc92;clip-path:inset(0 calc(100% - var(--x)) 0 var(--x));transition:clip-path 1s cubic-bezier(.65,0,.25,1)}
+.menu-panel a.lit .i,.menu-panel a:focus-visible .i,.menu-panel a[aria-current] .i{clip-path:inset(0 0 0 0)}
 .menu-panel a[aria-current]::before{content:"";width:24px;height:1px;background:currentColor;opacity:.7}
 .menu-panel :focus-visible{outline-color:var(--cream)}
 .menu-open,.menu-open body{overflow:hidden}
