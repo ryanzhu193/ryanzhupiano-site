@@ -117,7 +117,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* About page on phones: full-width photo that fades at the bottom; the text slides up over it. */
 .about{padding-top:0}.about .two{display:block}
 .about .portrait{top:0;margin:0 -24px;z-index:0}
-.about .portrait img{width:100%;max-width:none;height:calc(100vh - var(--below,336px));height:calc(100svh - var(--below,336px));min-height:70vw;aspect-ratio:auto;object-position:50% 30%;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 6%,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 6%,#000 78%,transparent 100%)}
+.about .portrait img{width:100%;max-width:none;height:calc(100vh - var(--below,336px));height:calc(100svh - var(--below,336px));min-height:70vw;aspect-ratio:auto;object-position:50% 30%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
 .about .portrait .credit{bottom:auto;top:auto;bottom:26%;right:14px;font-size:.7rem}
 .about .bio{position:relative;z-index:1;margin:-64px -24px 0;padding:64px 24px 0;background:linear-gradient(to bottom,rgba(235,227,218,0) 0,var(--cream) 48px)}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-bg,.menu-panel a,.menu-panel .t span,.menu-btn span,main,footer,.brand{transition:none!important}}
