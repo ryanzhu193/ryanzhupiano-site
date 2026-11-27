@@ -7,25 +7,29 @@
 <meta name="description" content="Ryan Zhu is a classical pianist available for concerts, recitals and collaborations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap">
+<header class="over"><div class="wrap">
 <a class="brand" href="index.html">Ryan Zhu, Pianist</a>
-<details class="menu"><summary>Menu</summary><nav aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="performances.html">Performances</a><a href="repertoire.html">Repertoire</a><a href="recordings.html">Recordings</a><a href="media-kit.html">Media Kit</a><a href="contact.html">Contact</a></nav></details>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span><span></span><span></span></button>
+<nav id="site-menu" class="menu-panel" aria-label="Main"><div class="wrap"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="performances.html">Performances</a><a href="repertoire.html">Repertoire</a><a href="recordings.html">Recordings</a><a href="media-kit.html">Media Kit</a><a href="contact.html">Contact</a></div></nav>
 </div></header>
 <main id="main">
-<div class="wrap hero">
-<div>
-<h1>Ryan Zhu<br>Pianist</h1>
+<section class="hero-full" aria-label="Introduction">
+<img src="hero-piano.jpg" alt="Ryan Zhu performing at the piano" class="photo">
+<img src="hero-piano.jpg" alt="" class="photo soft">
+<div class="fade"></div>
+<div class="name"><h1>RYAN ZHU</h1><p>pianist</p></div>
+<p class="credit">photo: Matthew Andrews</p>
+</section>
+<section><div class="wrap">
 <p>[One sentence on your repertoire and what you offer: recitals, collaborations, masterclasses.]</p>
 <a class="btn" href="contact.html">Get in touch</a>
-</div>
-<div class="ph" role="img" aria-label="Photo placeholder">[Hero photo: you at the piano]</div>
-</div>
+</div></section>
 </main>
 <footer><div class="wrap">
 <span>Ryan Zhu, Pianist</span>
