@@ -88,6 +88,12 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .portrait{position:sticky;top:24px;margin:6px 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
 .about{padding-top:4px}
 .about .two{grid-template-columns:auto 1fr;gap:64px}
+.quote{margin:0 0 40px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.quote blockquote{margin:0}
+.quote blockquote p{margin:0 0 14px;max-width:none;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.25;color:var(--ink)}
+.quote figcaption{font-size:.85rem;letter-spacing:.04em;color:var(--soft)}
+.quote figcaption::before{content:"— "}
+.quote figcaption a{color:inherit}
 .portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover}
 .portrait .credit,.photo-credit{margin:10px 0 0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.85rem;letter-spacing:.04em;color:var(--soft)}
 .portrait .credit{text-align:right;margin-top:6px;line-height:1.2}
