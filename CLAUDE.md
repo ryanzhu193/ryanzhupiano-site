@@ -27,4 +27,5 @@ Warm, editorial, sophisticated: cream and tan palette, large light serif heading
 ## How updates go live
 1. Make changes on a new branch. Never push straight to the main branch.
 2. Tell Ryan in one or two sentences what changed, and show him what the page looks like (a screenshot if possible).
-3. Ryan reviews and merges the pull request. GitHub Pages then republishes the site, usually within a couple of minutes.
+3. Open a pull request (a proposed change Ryan can review) and give him the link.
+4. Ryan either merges it himself, or asks Claude to merge it (for example, "merge it" or "merge for me"). That request is standing permission: Claude merges the pull request itself, then confirms it is merged. Only merge when Ryan asks, never on Claude's own initiative. GitHub Pages then republishes the site, usually within a couple of minutes.
