@@ -22,7 +22,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 @media(hover:hover){
 html:not(.menu-open) .menu-btn:hover{color:var(--cream)}
 html:not(.menu-open) .menu-btn:hover+.menu-panel .menu-bg{transform:scale(var(--ps,.015));transition:transform .6s cubic-bezier(.22,1,.36,1)}
-html:not(.menu-open) .menu-btn:hover+.menu-panel .menu-bg::after{opacity:1;transition:opacity .4s ease}
+html:not(.menu-open) .menu-btn:hover+.menu-panel .menu-bg::after{opacity:.55;transition:opacity .4s ease}
 }
 /* Home page: a lighter fade so more of the photo shows through behind the menu. */
 .home .menu-bg{background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 14%,rgba(42,33,27,.9) 30%,rgba(31,24,20,.55) 55%,rgba(26,20,17,.22) 100%)}
