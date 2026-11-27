@@ -46,6 +46,7 @@ ul.kit li{padding:12px 0;border-top:1px solid var(--line);display:flex;justify-c
 ul.kit li:last-child{border-bottom:1px solid var(--line)}
 ul.kit small{color:var(--soft)}
 form{display:grid;gap:16px}
+form .note{margin:0}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 label{font-size:.85rem;display:grid;gap:6px}
 input,textarea,select{font:inherit;font-size:1rem;color:var(--ink);background:transparent;border:1px solid var(--ink);border-radius:8px;padding:11px 14px;width:100%}
