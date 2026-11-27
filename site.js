@@ -34,8 +34,8 @@
     panel.style.setProperty('--mx',x+'px');
     panel.style.setProperty('--my',y+'px');
     panel.style.setProperty('--md',Math.ceil(r*2+4)+'px');
-    // Size of the small hover preview of the bloom (about 76px across), as a fraction of the full circle.
-    panel.style.setProperty('--ps',(76/Math.ceil(r*2+4)).toFixed(4));
+    // Size of the small hover preview of the bloom (about 56px across), as a fraction of the full circle.
+    panel.style.setProperty('--ps',(56/Math.ceil(r*2+4)).toFixed(4));
   }
   place();
   window.addEventListener('resize',place);

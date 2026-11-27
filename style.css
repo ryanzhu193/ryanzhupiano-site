@@ -16,11 +16,13 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .menu-btn span{display:block;width:26px;height:1.5px;background:currentColor;transition:transform .5s cubic-bezier(.65,0,.25,1),opacity .3s ease,background-color .4s ease}
 .menu-panel{position:fixed;inset:0;z-index:25;overflow-y:auto;color:var(--cream);visibility:hidden;transition:visibility 0s linear .8s}
 .menu-bg{position:fixed;left:var(--mx,100%);top:var(--my,0);width:var(--md,300vmax);height:var(--md,300vmax);margin:calc(var(--md,300vmax) / -2) 0 0 calc(var(--md,300vmax) / -2);border-radius:50%;background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 18%,rgba(42,33,27,.96) 44%,rgba(31,24,20,.8) 70%,rgba(26,20,17,.55) 100%);transform:scale(0);will-change:transform;backface-visibility:hidden;transition:transform .8s cubic-bezier(.65,0,.25,1);pointer-events:none}
-/* Hovering the closed menu button gives a small preview of the bloom: the same circle grows to about 76px across (--ps is set in site.js). It stays visible while the rest of the menu is hidden. */
+/* Hovering the closed menu button gives a small preview of the bloom: the same circle grows to about 56px across, in a browner tone (the ::after layer, which fades away as the menu opens) (--ps is set in site.js). It stays visible while the rest of the menu is hidden. */
 .menu-bg{visibility:visible}
+.menu-bg::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle closest-side,#8f735d 0%,#7a5f4b 50%,#644d3d 100%);opacity:0;transition:opacity .5s ease}
 @media(hover:hover){
 html:not(.menu-open) .menu-btn:hover{color:var(--cream)}
-html:not(.menu-open) .menu-btn:hover+.menu-panel .menu-bg{transform:scale(var(--ps,.02));transition:transform .6s cubic-bezier(.22,1,.36,1)}
+html:not(.menu-open) .menu-btn:hover+.menu-panel .menu-bg{transform:scale(var(--ps,.015));transition:transform .6s cubic-bezier(.22,1,.36,1)}
+html:not(.menu-open) .menu-btn:hover+.menu-panel .menu-bg::after{opacity:1;transition:opacity .4s ease}
 }
 /* Home page: a lighter fade so more of the photo shows through behind the menu. */
 .home .menu-bg{background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 14%,rgba(42,33,27,.9) 30%,rgba(31,24,20,.55) 55%,rgba(26,20,17,.22) 100%)}
