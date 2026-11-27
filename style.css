@@ -74,10 +74,10 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .two .ph{aspect-ratio:4/5}
 /* About page portrait: stays in place on desktop while the text scrolls past. */
-.portrait{position:sticky;top:24px;margin:0 0 0 max(-220px,min(0px,calc((1100px - 100vw) / 2)))}
+.portrait{position:sticky;top:24px;margin:0 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
 .about{padding-top:4px}
-.about .two{grid-template-columns:1.45fr 1fr;gap:56px}
-.portrait img{display:block;width:100%;height:auto;max-height:calc(100vh - 112px);object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+.about .two{grid-template-columns:1.2fr 1fr;gap:64px}
+.portrait img{display:block;width:100%;height:auto;max-height:calc((100vh - 112px) * .8);object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
 .portrait .credit{position:absolute;right:7%;bottom:6%;margin:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.8rem;letter-spacing:.04em;color:rgba(245,238,230,.62)}
 .note{font-size:.85rem;color:var(--soft)}
 .kit-group{margin:0 0 32px}
