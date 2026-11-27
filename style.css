@@ -13,10 +13,9 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .menu-btn{position:absolute;right:12px;top:50%;margin-top:-24px;z-index:30;width:48px;height:48px;border:0;border-radius:50%;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-content:center;gap:6px;padding:0}
 .menu-btn span{display:block;width:26px;height:1.5px;background:currentColor;transition:transform .5s cubic-bezier(.65,0,.25,1),opacity .3s ease}
 .menu-panel{position:fixed;inset:0;z-index:25;overflow-y:auto;color:var(--cream);visibility:hidden;transition:visibility 0s linear .8s}
-.menu-bg{--k:1.45;position:fixed;left:var(--mx,100%);top:var(--my,0);width:calc(var(--md,300vmax) * var(--k));height:calc(var(--md,300vmax) * var(--k));margin:calc(var(--md,300vmax) * var(--k) / -2) 0 0 calc(var(--md,300vmax) * var(--k) / -2);border-radius:50%;background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 17%,#2a211b 43%,#1a1411 69%,rgba(26,20,17,.75) 80%,rgba(26,20,17,0) 100%);transform:scale(0);will-change:transform;backface-visibility:hidden;transition:transform .8s cubic-bezier(.65,0,.25,1);pointer-events:none}
-/* The circle is drawn larger than the screen, so its soft, see-through rim shows only while it grows and the open menu is solid.
-   Home page: no extra size and a lighter fade, so the photo shows through behind the open menu. */
-.home .menu-bg{--k:1;background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 14%,rgba(42,33,27,.9) 30%,rgba(31,24,20,.55) 55%,rgba(26,20,17,.22) 100%)}
+.menu-bg{position:fixed;left:var(--mx,100%);top:var(--my,0);width:var(--md,300vmax);height:var(--md,300vmax);margin:calc(var(--md,300vmax) / -2) 0 0 calc(var(--md,300vmax) / -2);border-radius:50%;background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 18%,rgba(42,33,27,.96) 44%,rgba(31,24,20,.8) 70%,rgba(26,20,17,.55) 100%);transform:scale(0);will-change:transform;backface-visibility:hidden;transition:transform .8s cubic-bezier(.65,0,.25,1);pointer-events:none}
+/* Home page: a lighter fade so more of the photo shows through behind the menu. */
+.home .menu-bg{background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 14%,rgba(42,33,27,.9) 30%,rgba(31,24,20,.55) 55%,rgba(26,20,17,.22) 100%)}
 .menu-panel .wrap{max-width:none;position:relative;display:flex;flex-direction:column;align-items:flex-end;gap:0;padding-top:80px;padding-bottom:48px}
 .menu-panel a{display:flex;align-items:center;gap:14px;margin-right:-.24em;padding:9px 0;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:1.15rem;letter-spacing:.24em;line-height:1;text-transform:uppercase;text-decoration:none;opacity:0;transform:translateY(-6px);transition:opacity .25s ease,transform .25s ease}
 .menu-panel .t{display:grid}
@@ -33,6 +32,9 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
 .menu-open .menu-panel{visibility:visible;transition:none}
 .menu-open .menu-bg{transform:scale(1)}
+/* Other pages: softly blur the page behind the open menu so the eye goes to the menu. */
+body:not(.home)>main,body:not(.home)>footer,body:not(.home) .brand{transition:filter .6s ease}
+.menu-open body:not(.home)>main,.menu-open body:not(.home)>footer,.menu-open body:not(.home) .brand{filter:blur(4px)}
 .menu-open .menu-panel a{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.65,0,.25,1)}
 .menu-open .menu-panel a:nth-child(1){transition-delay:0.22s}
 .menu-open .menu-panel a:nth-child(2){transition-delay:0.27s}
@@ -106,4 +108,4 @@ ul.events{list-style:none;padding:0;margin:40px 0 0;border-bottom:1px solid var(
 footer{padding:36px 0;font-size:.9rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media(max-width:760px){body{font-size:16px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-bg,.menu-panel a,.menu-panel .t span,.menu-btn span{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-bg,.menu-panel a,.menu-panel .t span,.menu-btn span,main,footer,.brand{transition:none!important}}
