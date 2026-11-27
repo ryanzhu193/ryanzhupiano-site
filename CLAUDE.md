@@ -1,0 +1,29 @@
+# Website for Ryan Zhu, classical pianist
+
+This repository is the professional website for Ryan Zhu (ryanzhupiano.com), published with GitHub Pages. The whole site is one file: `index.html`.
+
+## About Ryan (read this first)
+Ryan is a classical pianist, not a coder. Assume no technical background.
+- Explain what you are doing in plain language, and define any technical term the first time you use it.
+- When something needs action from Ryan (merging changes, DNS, form setup), give detailed, numbered, tap-by-tap steps. Say what he should see on screen when it works, and what to do if it looks different.
+- Do not ask Ryan to write code or type commands. Do the technical work yourself.
+- Ryan is usually on his phone. Lead with the answer and keep routine replies short.
+
+## Site purpose
+1. Concert and booking inquiries
+2. Recordings and videos
+3. Media kit and concert-organizing materials for presenters
+
+## Design direction
+Warm, editorial, sophisticated: cream and tan palette, large light serif headings, small quiet body text, dark pill buttons, an asymmetric hero with a photo, and a clean inquiry form. It must read well on a phone. Keep the existing look when making changes.
+
+## Rules
+- Keep the site as a single self-contained `index.html` unless Ryan asks for more files.
+- Never invent biography, repertoire, awards, dates, or quotes. Use [bracketed placeholders] until Ryan supplies real content.
+- The booking form uses a Formspree-style endpoint, because GitHub Pages cannot process forms. Do not replace it with a form that needs a server.
+- Proofread all copy. Keep the site accessible (readable contrast, labeled form fields, visible keyboard focus) and responsive.
+
+## How updates go live
+1. Make changes on a new branch. Never push straight to the main branch.
+2. Tell Ryan in one or two sentences what changed, and show him what the page looks like (a screenshot if possible).
+3. Ryan reviews and merges the pull request. GitHub Pages then republishes the site, usually within a couple of minutes.
