@@ -1,0 +1,66 @@
+:root{--cream:#ebe3da;--tan:#b9a692;--ink:#3b3029;--soft:#5f5046;--line:rgba(59,48,41,.25)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.75 "Libre Baskerville",Georgia,serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:999px;z-index:20}
+.skip:focus{left:8px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header{padding:18px 0;position:relative;z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:1.4rem;text-decoration:none}
+.menu{position:relative}
+.menu summary{list-style:none;cursor:pointer;border:1px solid var(--ink);border-radius:999px;padding:0 24px;min-height:44px;display:flex;align-items:center;font-size:.9rem}
+.menu summary::-webkit-details-marker{display:none}
+.menu[open] summary{background:var(--ink);color:var(--cream)}
+.menu nav{position:absolute;right:0;top:calc(100% + 10px);min-width:230px;background:var(--cream);border:1px solid var(--ink);border-radius:14px;padding:8px 0;box-shadow:0 12px 30px rgba(59,48,41,.2)}
+.menu nav a{display:block;padding:12px 24px;font-size:.95rem;text-decoration:none}
+.menu nav a:hover{background:rgba(59,48,41,.08)}
+.menu nav a[aria-current]{box-shadow:inset 3px 0 var(--ink);background:rgba(59,48,41,.06)}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:400}
+h1,h2{line-height:1.05;margin:0}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);letter-spacing:-.01em;margin-bottom:28px}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
+p{margin:0 0 1em;max-width:62ch}
+.btn{display:inline-block;background:var(--ink);color:var(--cream);border:0;border-radius:999px;padding:12px 28px;font:inherit;font-size:.9rem;text-decoration:none;cursor:pointer}
+.btn:hover{background:#241c17}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;padding:40px 24px 80px}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);margin-bottom:0}
+.hero p{color:var(--soft);margin:28px 0}
+.ph{background:linear-gradient(160deg,#cfc1b1,#a8947f);display:flex;align-items:flex-end;padding:14px;color:var(--ink);font-size:.8rem;min-height:140px}
+.hero .ph{aspect-ratio:4/5}
+.band{background:var(--tan);--soft:#3b3029}
+section,.band>.wrap{padding-top:64px;padding-bottom:80px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.three .ph{aspect-ratio:3/4;margin-bottom:14px}
+.three h3{font-size:1.3rem;margin:0 0 4px}
+.three small{color:var(--soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.two .ph{aspect-ratio:4/5}
+.note{font-size:.85rem;color:var(--soft)}
+.kit-group{margin:0 0 32px}
+.kit-group h3{font-size:1.5rem;margin:0 0 10px}
+ul.kit{list-style:none;padding:0;margin:0}
+ul.kit li{padding:12px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+ul.kit li:last-child{border-bottom:1px solid var(--line)}
+ul.kit small{color:var(--soft)}
+form{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:.85rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;font-size:1rem;color:var(--ink);background:transparent;border:1px solid var(--ink);border-radius:8px;padding:11px 14px;width:100%}
+textarea{min-height:140px;resize:vertical}
+.rep-sec{margin-top:56px}
+.rep-sec h2{margin-bottom:8px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.comps{columns:2;column-gap:56px}
+.comp{break-inside:avoid;padding-top:24px}
+.comp h3{font-size:1.5rem;margin:0 0 6px;line-height:1.2}
+.comp ul{list-style:none;padding:0;margin:0}
+.comp>ul>li{padding:8px 0;border-top:1px solid var(--line);font-size:.92rem;line-height:1.6}
+.comp ul ul{margin-top:4px}
+.comp ul ul li.bk{color:var(--ink);padding-top:8px}
+.comp ul ul li{padding:1px 0 1px 16px;color:var(--soft);font-size:.86rem;line-height:1.55}
+footer{padding:36px 0;font-size:.9rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){body{font-size:16px}.hero,.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.hero .ph{aspect-ratio:4/3}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}.menu nav{min-width:min(260px,calc(100vw - 48px))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

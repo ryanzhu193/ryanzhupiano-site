@@ -8,137 +8,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
-<style>
-:root{--cream:#ebe3da;--tan:#b9a692;--ink:#3b3029;--soft:#6a5b50;--line:rgba(59,48,41,.25)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.75 "Libre Baskerville",Georgia,serif}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-header{padding:22px 0}
-header .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
-.brand{font-family:"Cormorant Garamond",serif;font-size:1.4rem;text-decoration:none}
-nav a{margin-left:22px;font-size:.9rem;text-decoration:none}
-nav a:hover{text-decoration:underline}
-h1,h2{font-family:"Cormorant Garamond",serif;font-weight:400;line-height:1.05;margin:0}
-h1{font-size:clamp(2.8rem,8vw,5.6rem);letter-spacing:-.01em}
-h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
-p{margin:0 0 1em;max-width:62ch}
-.btn{display:inline-block;background:var(--ink);color:var(--cream);border:0;border-radius:999px;padding:12px 28px;font:inherit;font-size:.9rem;text-decoration:none;cursor:pointer}
-.btn:hover{background:#241c17}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;padding:40px 24px 80px}
-.hero p{color:var(--soft);margin:28px 0}
-.ph{background:linear-gradient(160deg,#cfc1b1,#a8947f);display:flex;align-items:flex-end;padding:14px;color:var(--cream);font-size:.8rem;min-height:140px}
-.hero .ph{aspect-ratio:4/5}
-.band{background:var(--tan);padding:80px 0}
-section{padding:80px 0}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.three .ph{aspect-ratio:3/4;margin-bottom:14px}
-.three h3{font:400 1.05rem "Cormorant Garamond",serif;font-size:1.3rem;margin:0 0 4px}
-.three small{color:var(--soft)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.two .ph{aspect-ratio:4/5}
-.note{font-size:.85rem;color:var(--soft)}
-ul.kit{list-style:none;padding:0;margin:0 0 28px}
-ul.kit li{padding:12px 0;border-top:1px solid var(--line)}
-ul.kit li:last-child{border-bottom:1px solid var(--line)}
-form{display:grid;gap:16px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{font-size:.85rem;display:grid;gap:6px}
-input,textarea,select{font:inherit;font-size:1rem;color:var(--ink);background:transparent;border:1px solid var(--ink);border-radius:8px;padding:11px 14px;width:100%}
-textarea{min-height:140px;resize:vertical}
-.rep{border-top:1px solid var(--line)}
-.rep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:28px}
-.rep h3{font:400 1.5rem "Cormorant Garamond",serif;margin:0 0 10px}
-.rep ul{list-style:none;padding:0;margin:0}
-.rep li{padding:9px 0;border-top:1px solid var(--line);font-size:.92rem}
-footer{padding:40px 0;font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:760px){body{font-size:16px}.hero,.two,.row,.rep-grid{grid-template-columns:1fr}.three{grid-template-columns:1fr 1fr}nav a{margin:0 16px 0 0}.hero .ph{aspect-ratio:4/3}}
-</style>
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap">
-<a class="brand" href="#top">Ryan Zhu, Pianist</a>
-<nav><a href="#recordings">Recordings</a><a href="#about">About</a><a href="#repertoire">Repertoire</a><a href="#media-kit">Media kit</a><a href="#contact">Book</a></nav>
+<a class="brand" href="index.html">Ryan Zhu, Pianist</a>
+<details class="menu"><summary>Menu</summary><nav aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="recordings.html">Recordings</a><a href="about.html">About</a><a href="repertoire.html">Repertoire</a><a href="media-kit.html">Media Kit</a><a href="contact.html">Contact</a></nav></details>
 </div></header>
-
-<main id="top">
+<main id="main">
 <div class="wrap hero">
 <div>
 <h1>Ryan Zhu<br>Pianist</h1>
 <p>[One sentence on your repertoire and what you offer: recitals, collaborations, masterclasses.]</p>
-<a class="btn" href="#contact">Book a performance</a>
+<a class="btn" href="contact.html">Get in touch</a>
 </div>
 <div class="ph" role="img" aria-label="Photo placeholder">[Hero photo: you at the piano]</div>
 </div>
-
-<div class="band" id="recordings"><div class="wrap">
-<h2>Recordings</h2>
-<div class="three">
-<div><div class="ph">[Video 1]</div><h3>[Piece title]</h3><small>[Composer, venue, year]</small></div>
-<div><div class="ph">[Video 2]</div><h3>[Piece title]</h3><small>[Composer, venue, year]</small></div>
-<div><div class="ph">[Video 3]</div><h3>[Piece title]</h3><small>[Composer, venue, year]</small></div>
-</div>
-<p class="note" style="margin-top:24px">Each placeholder will become an embedded video or audio player.</p>
-</div></div>
-
-<section id="about"><div class="wrap two">
-<div class="ph" role="img" aria-label="Portrait placeholder">[Portrait]</div>
-<div>
-<h2>About</h2>
-<p>[Short bio, two or three paragraphs: training, teachers, notable performances, current projects.]</p>
-<p>[Optional: upcoming concerts or recent highlights.]</p>
-</div>
-</div></section>
-
-<section class="rep" id="repertoire"><div class="wrap">
-<h2>Repertoire</h2>
-<p>Selected works I have performed. [Add a line about your repertoire focus, and that programs can be tailored to the event.]</p>
-<div class="rep-grid">
-<div><h3>[Baroque and Classical]</h3><ul><li>[Composer: Work]</li><li>[Composer: Work]</li><li>[Composer: Work]</li></ul></div>
-<div><h3>[Romantic]</h3><ul><li>[Composer: Work]</li><li>[Composer: Work]</li><li>[Composer: Work]</li></ul></div>
-<div><h3>[20th century and contemporary]</h3><ul><li>[Composer: Work]</li><li>[Composer: Work]</li><li>[Composer: Work]</li></ul></div>
-</div>
-</div></section>
-
-<div class="band" id="media-kit"><div class="wrap two">
-<div>
-<h2>Media kit for organizers</h2>
-<p>Everything you need to promote and plan a concert.</p>
-</div>
-<div>
-<ul class="kit">
-<li>Short bio and long bio</li>
-<li>High-resolution photos</li>
-<li>Sample programs and repertoire list</li>
-<li>Technical rider and piano requirements</li>
-</ul>
-<a class="btn" href="#">Download media kit (PDF)</a>
-</div>
-</div></div>
-
-<section id="contact"><div class="wrap two">
-<div>
-<h2>Book a performance</h2>
-<p>Share the date, venue and occasion, and I will reply with availability and program options.</p>
-</div>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<div class="row">
-<label>First name<input name="first" required autocomplete="given-name"></label>
-<label>Last name<input name="last" required autocomplete="family-name"></label>
-</div>
-<label>Email<input type="email" name="email" required autocomplete="email"></label>
-<label>Type of event<select name="event"><option>Recital</option><option>Concert with ensemble</option><option>Private event</option><option>Masterclass</option><option>Other</option></select></label>
-<label>Date and venue<input name="details"></label>
-<label>Message<textarea name="message" required></textarea></label>
-<button class="btn" type="submit" style="justify-self:start">Send inquiry</button>
-</form>
-</div></section>
 </main>
-
-<footer class="band"><div class="wrap">
+<footer><div class="wrap">
 <span>Ryan Zhu, Pianist</span>
 <span>[your email]</span>
 </div></footer>
