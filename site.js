@@ -2,13 +2,29 @@
 (function(){
   var btn=document.querySelector('.menu-btn'),panel=document.getElementById('site-menu'),root=document.documentElement;
   if(!btn||!panel)return;
-  // Give each menu item an upright and an italic copy, so hovering can fade smoothly between them.
+  // Give each menu item a plain copy and a coloured copy laid on top, so hovering can reveal the colour.
   panel.querySelectorAll('.wrap a').forEach(function(a){
     var t=a.textContent;a.textContent='';
     var w=document.createElement('span');w.className='t';
     var r=document.createElement('span');r.className='r';r.textContent=t;
     var i=document.createElement('span');i.className='i';i.textContent=t;i.setAttribute('aria-hidden','true');
     w.appendChild(r);w.appendChild(i);a.appendChild(w);
+    // The colour spreads out from wherever the mouse enters the word, and shrinks back to where it leaves.
+    function spot(e){
+      var b=w.getBoundingClientRect();
+      var x=Math.min(100,Math.max(0,(e.clientX-b.left)/b.width*100));
+      i.style.transition='none';
+      i.style.setProperty('--x',x+'%');
+      i.getBoundingClientRect();
+      i.style.transition='';
+    }
+    a.addEventListener('pointerenter',function(e){if(e.pointerType!=='mouse')return;spot(e);a.classList.add('lit')});
+    a.addEventListener('pointerleave',function(e){
+      if(!a.classList.contains('lit'))return;
+      var b=w.getBoundingClientRect();
+      i.style.setProperty('--x',Math.min(100,Math.max(0,(e.clientX-b.left)/b.width*100))+'%');
+      a.classList.remove('lit');
+    });
   });
   // Centre the colour circle on the button, sized to reach the far corner of the screen.
   function place(){
