@@ -43,7 +43,7 @@ header.over .menu-btn{color:var(--cream);filter:drop-shadow(0 1px 3px rgba(0,0,0
 .hero-full .soft{filter:blur(14px);transform:scale(1.06);-webkit-mask-image:linear-gradient(to bottom,transparent 62%,#000 88%);mask-image:linear-gradient(to bottom,transparent 62%,#000 88%)}
 .hero-full .fade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(31,25,21,0) 56%,rgba(31,25,21,.6) 74%,rgba(31,25,21,.95) 88%,#1f1915 100%)}
 .hero-full .name{position:absolute;left:0;right:0;bottom:7vh;bottom:7svh;text-align:center;padding:0 24px}
-.hero-full h1{font-weight:300;color:var(--cream);letter-spacing:.22em;padding-left:.22em;margin:0 0 6px;font-size:clamp(2.6rem,9vw,5.4rem);line-height:1}
+.hero-full h1{font-weight:300;color:var(--cream);letter-spacing:.22em;padding-left:.22em;margin:0 0 6px;font-size:clamp(2rem,10vw,5.4rem);line-height:1;white-space:nowrap}
 .hero-full .name p{margin:0 auto;max-width:none;font-family:"Cormorant Garamond",serif;font-size:clamp(1.2rem,3.2vw,1.7rem);letter-spacing:.3em;padding-left:.3em;color:#cdbfb0}
 .hero-full .credit{position:absolute;right:16px;bottom:10px;margin:0;font-size:.7rem;color:#b3a596}
 h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:400}
@@ -96,5 +96,5 @@ ul.events{list-style:none;padding:0;margin:40px 0 0;border-bottom:1px solid var(
 .pill:hover{background:var(--ink);color:var(--cream)}
 footer{padding:36px 0;font-size:.9rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:760px){body{font-size:16px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}}
+@media(max-width:760px){body{font-size:16px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-open .menu-panel,.menu-panel a,.menu-btn span{transition:none!important}}
