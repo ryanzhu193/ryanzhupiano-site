@@ -78,9 +78,9 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .portrait{position:sticky;top:24px;margin:clamp(.29rem,.84vw,.5rem) 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
 .about{padding-top:4px}
 .about .two{grid-template-columns:auto 1fr;gap:64px}
-.portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent);mask-image:linear-gradient(to bottom,#000 84%,transparent)}
+.portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover}
 .portrait .credit,.photo-credit{margin:10px 0 0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.85rem;letter-spacing:.04em;color:var(--soft)}
-.portrait .credit{text-align:right;margin-top:-6px;position:relative}
+.portrait .credit{text-align:right;margin-top:6px;line-height:1.2}
 .photo-credit{display:none}
 .note{font-size:.85rem;color:var(--soft)}
 .kit-group{margin:0 0 32px}
