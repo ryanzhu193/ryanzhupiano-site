@@ -73,6 +73,10 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .three small{color:var(--soft)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .two .ph{aspect-ratio:4/5}
+/* About page portrait: stays in place on desktop while the text scrolls past. */
+.portrait{position:sticky;top:32px;margin:0}
+.portrait img{display:block;width:100%;height:auto;max-height:calc(100vh - 64px);object-fit:cover}
+.portrait .credit{position:absolute;right:12px;bottom:8px;margin:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.8rem;letter-spacing:.04em;color:rgba(245,238,230,.62)}
 .note{font-size:.85rem;color:var(--soft)}
 .kit-group{margin:0 0 32px}
 .kit-group h3{font-size:1.5rem;margin:0 0 10px}
@@ -107,5 +111,11 @@ ul.events{list-style:none;padding:0;margin:40px 0 0;border-bottom:1px solid var(
 .pill:hover{background:var(--ink);color:var(--cream)}
 footer{padding:36px 0;font-size:.9rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:760px){body{font-size:16px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
+@media(max-width:760px){body{font-size:16px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}
+/* About page on phones: full-width photo that fades at the bottom; the text slides up over it. */
+.about{padding-top:0}.about .two{display:block}
+.about .portrait{top:0;margin:0 -24px;z-index:0}
+.about .portrait img{max-height:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}
+.about .portrait .credit{bottom:auto;top:calc(100% - 46%);right:14px;font-size:.7rem}
+.about .bio{position:relative;z-index:1;margin:-30vw -24px 0;padding:30vw 24px 0;background:linear-gradient(to bottom,rgba(235,227,218,0) 0,var(--cream) 34vw)}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-bg,.menu-panel a,.menu-panel .t span,.menu-btn span,main,footer,.brand{transition:none!important}}
