@@ -78,7 +78,9 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .about{padding-top:4px}
 .about .two{grid-template-columns:auto 1fr;gap:64px}
 .portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
-.portrait .credit{position:absolute;right:7%;bottom:6%;margin:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.8rem;letter-spacing:.04em;color:rgba(245,238,230,.62)}
+.portrait .credit,.photo-credit{margin:10px 0 0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.85rem;letter-spacing:.04em;color:var(--soft)}
+.portrait .credit{text-align:right}
+.photo-credit{display:none}
 .note{font-size:.85rem;color:var(--soft)}
 .kit-group{margin:0 0 32px}
 .kit-group h3{font-size:1.5rem;margin:0 0 10px}
@@ -118,6 +120,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .about{padding-top:0}.about .two{display:block}
 .about .portrait{top:0;margin:0 -24px;z-index:0}
 .about .portrait img{width:100%;max-width:none;height:calc(100vh - var(--below,336px));height:calc(100svh - var(--below,336px));min-height:70vw;aspect-ratio:auto;object-position:50% 30%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
-.about .portrait .credit{bottom:auto;top:auto;bottom:26%;right:14px;font-size:.7rem}
+.about .portrait .credit{display:none}.about .photo-credit{display:block;margin-top:32px}
 .about .bio{position:relative;z-index:1;margin:-64px -24px 0;padding:64px 24px 0;background:linear-gradient(to bottom,rgba(235,227,218,0) 0,var(--cream) 48px)}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-bg,.menu-panel a,.menu-panel .t span,.menu-btn span,main,footer,.brand{transition:none!important}}
