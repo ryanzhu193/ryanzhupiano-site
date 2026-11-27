@@ -8,14 +8,14 @@ a{color:inherit}
 .skip:focus{left:8px}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 header{padding:18px 0;position:relative;z-index:5}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:48px}
 .brand{font-family:"Cormorant Garamond",serif;font-size:1.4rem;text-decoration:none}
-.menu-btn{position:relative;z-index:30;width:48px;height:48px;margin-right:-12px;border:0;border-radius:50%;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-content:center;gap:6px;padding:0}
+.menu-btn{position:absolute;right:12px;top:50%;margin-top:-24px;z-index:30;width:48px;height:48px;border:0;border-radius:50%;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-content:center;gap:6px;padding:0}
 .menu-btn span{display:block;width:26px;height:1.5px;background:currentColor;transition:transform .5s cubic-bezier(.65,0,.25,1),opacity .3s ease}
 .menu-panel{position:fixed;inset:0;z-index:25;overflow-y:auto;color:var(--cream);visibility:hidden;transition:visibility 0s linear .8s}
 .menu-bg{position:fixed;left:var(--mx,100%);top:var(--my,0);width:var(--md,300vmax);height:var(--md,300vmax);margin:calc(var(--md,300vmax) / -2) 0 0 calc(var(--md,300vmax) / -2);border-radius:50%;background:radial-gradient(circle closest-side,#7a6150 0%,#4a3a30 25%,#2a211b 62%,#1a1411 100%);transform:scale(0);will-change:transform;backface-visibility:hidden;transition:transform .8s cubic-bezier(.65,0,.25,1);pointer-events:none}
-.menu-panel .wrap{position:relative;display:flex;flex-direction:column;align-items:flex-end;gap:0;padding-top:80px;padding-bottom:48px}
-.menu-panel a{display:flex;align-items:center;gap:14px;margin-right:-.24em;padding:9px 0;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(1.15rem,3.4vw,1.45rem);letter-spacing:.24em;line-height:1;text-transform:uppercase;text-decoration:none;opacity:0;transform:translateY(-6px);transition:opacity .25s ease,transform .25s ease}
+.menu-panel .wrap{max-width:none;position:relative;display:flex;flex-direction:column;align-items:flex-end;gap:0;padding-top:80px;padding-bottom:48px}
+.menu-panel a{display:flex;align-items:center;gap:14px;margin-right:-.24em;padding:9px 0;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:1.15rem;letter-spacing:.24em;line-height:1;text-transform:uppercase;text-decoration:none;opacity:0;transform:translateY(-6px);transition:opacity .25s ease,transform .25s ease}
 .menu-panel .t{display:grid}
 .menu-panel .t span{grid-area:1/1;text-align:right;transition:opacity .5s ease,transform .5s cubic-bezier(.65,0,.25,1)}
 .menu-panel .t .i{font-style:italic;opacity:0;transform:translateX(5px)}
