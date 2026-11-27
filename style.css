@@ -1,7 +1,7 @@
 :root{--cream:#ebe3da;--tan:#b9a692;--ink:#3b3029;--soft:#5f5046;--line:rgba(59,48,41,.25)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.75 "Libre Baskerville",Georgia,serif}
+body{margin:0;background:var(--cream);color:var(--ink);font:19px/1.75 "Newsreader",Georgia,serif;letter-spacing:-.015em}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:999px;z-index:20}
@@ -88,6 +88,7 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .portrait{position:sticky;top:24px;margin:6px 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
 .about{padding-top:4px}
 .about .two{grid-template-columns:auto 1fr;gap:64px}
+.bio>p:not(.photo-credit){text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 .quote{margin:0 0 40px;padding:4px 0 4px 22px;border-left:2px solid var(--tan)}
 .quote blockquote{margin:0}
 .quote blockquote p{margin:0 0 14px;max-width:none;font-family:"Bodoni Moda",serif;font-style:italic;font-weight:400;font-size:clamp(1.45rem,3.4vw,2rem);line-height:1.2;color:var(--ink)}
@@ -131,7 +132,7 @@ ul.events{list-style:none;padding:0;margin:40px 0 0;border-bottom:1px solid var(
 .pill:hover{background:var(--ink);color:var(--cream)}
 footer{padding:36px 0;font-size:.9rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:760px){body{font-size:16px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}
+@media(max-width:760px){body{font-size:18px}.two,.row{grid-template-columns:1fr}.comps{columns:1}.three{grid-template-columns:1fr 1fr}.events li{grid-template-columns:1fr}.events .pill{justify-self:start}section,.band>.wrap{padding-top:40px;padding-bottom:56px}.two{gap:32px}
 /* About page on phones: full-width photo that fades at the bottom; the text slides up over it. */
 .about{padding-top:0}.about .two{display:block}
 .about .portrait{top:0;margin:0 -24px;z-index:0}
