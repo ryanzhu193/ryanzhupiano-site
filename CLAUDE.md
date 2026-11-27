@@ -21,6 +21,7 @@ Warm, editorial, sophisticated: cream and tan palette, large light serif heading
 - Each menu item is its own page. The menu is a three-line button (labeled "Menu" for screen readers) that opens a full-screen panel: a dark warm gradient circle grows out from the button (animated with transform only, for smoothness), and small all-capital items sit at the top right under the button, crossfading to italic on hover. It lists, in this order, Home, About, Performances, Repertoire, Recordings, Media Kit (capital K), and Contact. When adding a page, add it to the menu on every page. Keep all files in the top folder (no subfolders) so Ryan can upload from his phone.
 - Never invent biography, repertoire, awards, dates, or quotes. Use [bracketed placeholders] until Ryan supplies real content.
 - The booking form uses a Formspree-style endpoint, because GitHub Pages cannot process forms. Do not replace it with a form that needs a server.
+- Every page loads `style.css?v=...` and `site.js?v=...`. Whenever you change `style.css` or `site.js`, update that version label on every page (use the date plus a letter, e.g. `20261127b`) so browsers fetch the new file right away.
 - Proofread all copy. Keep the site accessible (readable contrast, labeled form fields, visible keyboard focus) and responsive.
 
 ## How updates go live
