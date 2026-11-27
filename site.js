@@ -34,9 +34,13 @@
     panel.style.setProperty('--mx',x+'px');
     panel.style.setProperty('--my',y+'px');
     panel.style.setProperty('--md',Math.ceil(r*2+4)+'px');
+    // Size of the small hover preview of the bloom (about 76px across), as a fraction of the full circle.
+    panel.style.setProperty('--ps',(76/Math.ceil(r*2+4)).toFixed(4));
   }
   place();
   window.addEventListener('resize',place);
+  // Re-measure when the mouse reaches the button, in case the page has scrolled.
+  btn.addEventListener('pointerenter',place);
   function setOpen(open){
     if(open)place();
     root.classList.toggle('menu-open',open);
