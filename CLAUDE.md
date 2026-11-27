@@ -18,7 +18,7 @@ Ryan is a classical pianist, not a coder. Assume no technical background.
 Warm, editorial, sophisticated: cream and tan palette, large light serif headings, small quiet body text, dark pill buttons, an asymmetric hero with a photo, and a clean inquiry form. It must read well on a phone. Keep the existing look when making changes.
 
 ## Rules
-- Each menu item is its own page. The menu is a dropdown labeled "Menu" with Home, Recordings, About, Repertoire, Media Kit (capital K), and Contact. When adding a page, add it to the menu on every page. Keep all files in the top folder (no subfolders) so Ryan can upload from his phone.
+- Each menu item is its own page. The menu is a dropdown labeled "Menu" with, in this order, Home, About, Repertoire, Recordings, Media Kit (capital K), and Contact. When adding a page, add it to the menu on every page. Keep all files in the top folder (no subfolders) so Ryan can upload from his phone.
 - Never invent biography, repertoire, awards, dates, or quotes. Use [bracketed placeholders] until Ryan supplies real content.
 - The booking form uses a Formspree-style endpoint, because GitHub Pages cannot process forms. Do not replace it with a form that needs a server.
 - Proofread all copy. Keep the site accessible (readable contrast, labeled form fields, visible keyboard focus) and responsive.
