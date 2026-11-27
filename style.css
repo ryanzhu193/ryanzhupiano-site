@@ -6,6 +6,8 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:999px;z-index:20}
 .skip:focus{left:8px}
+/* Hidden on screen but still read out by screen readers. */
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 header{padding:18px 0;position:relative;z-index:5}
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:48px}
@@ -74,8 +76,8 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .two .ph{aspect-ratio:4/5}
 /* About page portrait: stays in place on desktop while the text scrolls past. */
-/* top margin lines the photo up with the top of the letters in the "About" heading */
-.portrait{position:sticky;top:24px;margin:clamp(.29rem,.84vw,.5rem) 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
+/* top margin lines the photo up with the top of the first line of the bio */
+.portrait{position:sticky;top:24px;margin:6px 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
 .about{padding-top:4px}
 .about .two{grid-template-columns:auto 1fr;gap:64px}
 .portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover}
@@ -120,7 +122,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* About page on phones: full-width photo that fades at the bottom; the text slides up over it. */
 .about{padding-top:0}.about .two{display:block}
 .about .portrait{top:0;margin:0 -24px;z-index:0}
-.about .portrait img{width:100%;max-width:none;height:calc(100vh - var(--below,336px));height:calc(100svh - var(--below,336px));min-height:70vw;aspect-ratio:auto;object-position:50% 30%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+.about .portrait img{width:100%;max-width:none;height:calc(100vh - var(--below,252px));height:calc(100svh - var(--below,252px));min-height:70vw;aspect-ratio:auto;object-position:50% 30%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
 .about .portrait .credit{display:none}.about .photo-credit{display:block;margin-top:32px}
 .about .bio{position:relative;z-index:1;margin:-64px -24px 0;padding:64px 24px 0;background:linear-gradient(to bottom,rgba(235,227,218,0) 0,var(--cream) 48px)}.hero-full .credit{font-size:.6rem;right:12px;bottom:8px}.hero-full .photo{object-position:36% 40%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-panel,.menu-bg,.menu-panel a,.menu-panel .t span,.menu-btn span,main,footer,.brand{transition:none!important}}
