@@ -74,10 +74,11 @@ section,.band>.wrap{padding-top:64px;padding-bottom:80px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .two .ph{aspect-ratio:4/5}
 /* About page portrait: stays in place on desktop while the text scrolls past. */
-.portrait{position:sticky;top:24px;margin:0 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
+/* top margin lines the photo up with the top of the letters in the "About" heading */
+.portrait{position:sticky;top:24px;margin:clamp(.29rem,.84vw,.5rem) 0 0 max(-80px,min(0px,calc((1100px - 100vw) / 2)))}
 .about{padding-top:4px}
 .about .two{grid-template-columns:auto 1fr;gap:64px}
-.portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+.portrait img{display:block;width:auto;max-width:45vw;height:calc((100vh - 112px) * .9);aspect-ratio:4/5;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,#000 95%,transparent);mask-composite:intersect}
 .portrait .credit,.photo-credit{margin:10px 0 0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.85rem;letter-spacing:.04em;color:var(--soft)}
 .portrait .credit{text-align:right}
 .photo-credit{display:none}
